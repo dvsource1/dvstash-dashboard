@@ -1,3 +1,4 @@
+import SideBar from '@/components/SideBar'
 import { Fira_Code } from 'next/font/google'
 import './globals.css'
 
@@ -15,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className} bg-od_black text-od_gray`}>
-        {children}
+      <body className={`${firaCode.className} flex`}>
+        {/* SideBar */}
+        <SideBar />
+
+        <main className="flex-1 h-screen bg-od_black">{children}</main>
       </body>
     </html>
   )

@@ -1,50 +1,81 @@
 'use client'
 
 import {
+  AdjustmentsVerticalIcon,
   BookmarkIcon,
   HomeIcon,
   NewspaperIcon,
 } from '@heroicons/react/24/outline'
 import Logo from './Logo'
 import SideBarIcon from './SideBarIcon'
+import User from './User'
 
 type SideBarProps = {}
 
-enum SideBarAction {
+enum SideBarActions {
   HOME,
   NEWS,
   BLOG,
+  APP,
+}
+
+interface SideBarAction {
+  id: SideBarActions
+  title: string
+  icon: any
 }
 
 const SideBar: React.FC<SideBarProps> = ({}) => {
-  const actions = [
+  const actions: SideBarAction[] = [
     {
-      id: SideBarAction.HOME,
+      id: SideBarActions.HOME,
       title: 'Home',
       icon: HomeIcon,
     },
     {
-      id: SideBarAction.NEWS,
+      id: SideBarActions.NEWS,
       title: 'News',
       icon: NewspaperIcon,
     },
     {
-      id: SideBarAction.BLOG,
+      id: SideBarActions.BLOG,
       title: 'Blog',
       icon: BookmarkIcon,
     },
+    {
+      id: SideBarActions.APP,
+      title: 'App',
+      icon: AdjustmentsVerticalIcon,
+    },
   ]
 
+  const handleActionClick = (action: SideBarAction) => () => {
+    switch (action.id) {
+      case SideBarActions.HOME:
+      case SideBarActions.NEWS:
+      case SideBarActions.BLOG:
+        break
+      case SideBarActions.APP:
+        break
+    }
+  }
+
   return (
-    <div className="h-screen w-12 bg-od_black/95">
+    <div className="flex h-screen w-12 flex-col bg-od_black/95">
       <Logo />
-      <ul>
-        {actions.map(action => (
-          <li key={action.id}>
-            <SideBarIcon icon={action.icon} title={action.title} />
-          </li>
-        ))}
-      </ul>
+      <div className="flex flex-1 flex-col">
+        <ul className="flex-1">
+          {actions.map(action => (
+            <li
+              className="cursor-pointer"
+              key={action.id}
+              onClick={handleActionClick(action)}>
+              <SideBarIcon icon={action.icon} title={action.title} />
+            </li>
+          ))}
+        </ul>
+        <User />
+      </div>
     </div>
   )
 }

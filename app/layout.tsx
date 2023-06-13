@@ -20,7 +20,7 @@ export default function RootLayout({
         {/* SideBar */}
         <SideBar />
 
-        <main className="flex-1 h-screen bg-od_black">{children}</main>
+        <main className="h-screen flex-1">{children}</main>
       </body>
     </html>
   )

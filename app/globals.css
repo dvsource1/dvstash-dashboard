@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cl-internal-b3fm6y,
+.cl-internal-b4xm84,
+.cl-userButtonPopoverFooter {
+  @apply hidden;
+}
+
+.cl-card {
+  @apply rounded-none bg-od_black p-6 shadow-none;
+}
+
+.cl-userButtonPopoverCard {
+  @apply bg-od_gray/5;
+}
+
+.cl-socialButtonsBlockButton {
+  @apply rounded-none;
+}
+
+.cl-headerTitle,
+.cl-headerSubtitle,
+.cl-footerActionText,
+.cl-userPreviewMainIdentifier,
+.cl-userPreviewSecondaryIdentifier,
+.cl-userButtonPopoverActionButtonText,
+.cl-profileSectionTitleText,
+.cl-accordionTriggerButton,
+.cl-navbarButton {
+  @apply text-od_gray;
+}
+
+.cl-internal-fqx4fd,
+.cl-internal-of57g {
+  @apply text-od_gray/80;
+}
+
+.cl-modalCloseButton,
+.cl-internal-1trxv31 {
+  @apply text-od_red;
+}
+
+.cl-footerActionLink,
+.cl-profileSectionPrimaryButton {
+  @apply text-od_blue/80 hover:text-od_blue/50;
+}
+
+.cl-badge {
+  @apply bg-od_blue/20 text-od_blue/80;
+}

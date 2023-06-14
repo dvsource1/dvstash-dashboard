@@ -1,4 +1,5 @@
 import SideBar from '@/components/SideBar'
+import { ClerkProvider } from '@clerk/nextjs'
 import { Fira_Code } from 'next/font/google'
 import './globals.css'
 
@@ -15,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${firaCode.className} flex`}>
-        {/* SideBar */}
-        <SideBar />
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${firaCode.className} flex`}>
+          {/* SideBar */}
+          <SideBar />
 
-        <main className="h-screen flex-1">{children}</main>
-      </body>
-    </html>
+          <main className="h-screen flex-1">{children}</main>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

@@ -11,20 +11,24 @@ const Page: React.FC<PageProps> = ({}) => {
   const { isLoaded, isSignedIn, user } = useUser()
   const { signOut } = useClerk()
 
-  return isLoaded && isSignedIn ? (
-    <div className="flex flex-col items-center gap-2 text-center text-od_gray">
-      <p>
-        You are already logged in as{' '}
-        <Link className="hover:underline" href="/profile">
-          @{user.username}
-        </Link>
-      </p>
-      <Button onClick={() => signOut()} icon={ArrowRightOnRectangleIcon}>
-        Logout
-      </Button>
+  return (
+    <div className="flex h-full flex-col items-center justify-center">
+      {isLoaded && isSignedIn ? (
+        <div className="gap-2 text-center text-od_gray">
+          <p>
+            You are already logged in as{' '}
+            <Link className="hover:underline" href="/profile">
+              @{user.username}
+            </Link>
+          </p>
+          <Button onClick={() => signOut()} icon={ArrowRightOnRectangleIcon}>
+            Logout
+          </Button>
+        </div>
+      ) : (
+        <SignIn signUpUrl="/sign-up" />
+      )}
     </div>
-  ) : (
-    <SignIn signUpUrl="/sign-up" />
   )
 }
 

@@ -34,10 +34,12 @@ const User: React.FC<UserProps> = ({}) => {
           <UserCircleIcon className="h-8 w-8 text-od_gray group-hover:text-white" />
         )}
       </Popover.Button>
-      <Popover.Panel className="max-w absolute bottom-0 left-12 flex w-52 min-w-max max-w-xs flex-col bg-od_black__gray_5 z-30">
+      <Popover.Panel className="max-w absolute bottom-0 left-12 z-30 flex w-52 min-w-max max-w-xs flex-col bg-od_black__gray_5">
         {/* Profile Header */}
         {isSignedIn && isLoaded && (
-          <div className="group flex w-full cursor-pointer gap-2 p-2">
+          <div
+            className="group flex w-full cursor-pointer gap-2 p-2"
+            onClick={() => router.push('/profile')}>
             <div className="flex w-12 items-center justify-center">
               <Image
                 className="h-10 w-10 rounded-full"

@@ -27,6 +27,10 @@
   @apply hidden;
 }
 
+.cl-navbar {
+  @apply rounded-none bg-od_black;
+}
+
 .cl-card {
   @apply rounded-none bg-od_black p-6 shadow-none;
 }
@@ -47,6 +51,7 @@
 .cl-userButtonPopoverActionButtonText,
 .cl-profileSectionTitleText,
 .cl-accordionTriggerButton,
+.cl-navbarMobileMenuButton,
 .cl-navbarButton {
   @apply text-od_gray;
 }

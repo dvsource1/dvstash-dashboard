@@ -1,7 +1,15 @@
+import { useRouter } from 'next/navigation'
+
 type LogoProps = {}
 
 const Logo: React.FC<LogoProps> = ({}) => {
-  return <div className="w-12 h-12 bg-logo bg-no-repeat bg-cover"></div>
+  const router = useRouter()
+
+  return (
+    <div
+      className="h-12 w-12 cursor-pointer bg-logo bg-cover bg-no-repeat"
+      onClick={() => router.push('/')}></div>
+  )
 }
 
 export default Logo

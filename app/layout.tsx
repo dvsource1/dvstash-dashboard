@@ -1,9 +1,17 @@
 import SideBar from '@/components/SideBar'
+import StatusBar from '@/components/StatusBar'
 import { ClerkProvider } from '@clerk/nextjs'
-import { Fira_Code } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const firaCode = Fira_Code({ subsets: ['latin'] })
+// const firaCode = Fira_Code({
+//   subsets: ['latin'],
+//   fallback: ['monospace'],
+// })
+
+const localFiraCode = localFont({
+  src: '../public/font/FiraCode-VariableFont_wght.ttf',
+})
 
 export const metadata = {
   title: 'DVSTASH | Dashboard',
@@ -18,11 +26,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${firaCode.className} flex`}>
+        <body className={`${localFiraCode.className} flex`}>
           {/* SideBar */}
           <SideBar />
 
-          <main className="h-screen flex-1">{children}</main>
+          <div className="flex h-screen flex-1 flex-col">
+            <div className="flex-1">{children}</div>
+            <StatusBar />
+          </div>
         </body>
       </html>
     </ClerkProvider>

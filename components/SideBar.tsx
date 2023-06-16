@@ -110,10 +110,10 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
       <Logo />
       <div className="flex flex-1 flex-col">
         <ul className="flex-1">
-          {actions.map(action => (
+          {actions.map((action, i) => (
             <li
               className="cursor-pointer"
-              key={action.id}
+              key={i}
               onClick={handleActionClick(action)}>
               <SideBarIcon icon={action.icon} title={action.title} />
             </li>

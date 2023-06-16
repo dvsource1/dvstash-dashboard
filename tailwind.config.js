@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        logo: "url('../public/logo/dv_stash_logo_white.png')",
+        logo: "url('../public/img/logo/dv_stash_logo_white.png')",
       },
       colors: {
         od_red: '#e06c75',

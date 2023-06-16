@@ -36,9 +36,6 @@ const Footer: React.FC<FooterProps> = ({}) => {
           About
         </Link>
       </div>
-      <div className="flex justify-center py-2 text-od_gray">
-        <p>&copy; Copyright 2023 | DVSTASH</p>
-      </div>
       {/* copyright */}
     </footer>
   )

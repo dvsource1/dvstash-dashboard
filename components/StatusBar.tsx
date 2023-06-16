@@ -5,11 +5,7 @@ import { PlusIcon } from '@heroicons/react/24/outline'
 type StatusBarProps = {}
 
 const StatusBar: React.FC<StatusBarProps> = ({}) => {
-  const actions = [
-    { title: 'Logout' },
-    { title: 'Export' },
-    { title: 'Hi Mom!' },
-  ]
+  const actions = [{ title: 'Logout' }, { title: 'Export' }]
 
   return (
     <div className="flex h-4 w-full justify-between border-t border-od_black__gray_40 bg-od_black text-xxs">

@@ -4,8 +4,9 @@ type PageProps = {}
 
 const Page: React.FC<PageProps> = ({}) => {
   return (
-    <div className="flex h-full bg-od_black">
+    <div className="flex h-full flex-col gap-2 bg-od_black">
       <Header title={'Store'} />
+      <div className="overflow-auto"></div>
     </div>
   )
 }

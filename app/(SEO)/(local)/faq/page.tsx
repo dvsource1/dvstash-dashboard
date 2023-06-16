@@ -22,10 +22,9 @@ const Page: React.FC<PageProps> = ({}) => {
   ]
 
   return (
-    <div className="flex flex-col">
-      <Header title={'FAQ'} />
-
-      <div className="w-full flex-1 px-4 pt-16">
+    <div className="flex h-full flex-col gap-2">
+      <Header title={'Faq'} />
+      <div className="overflow-auto">
         <div className="mx-auto w-full max-w-md bg-od_black__gray_10 p-2">
           <Disclosures faqs={faqs} />
         </div>

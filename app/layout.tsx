@@ -4,11 +4,6 @@ import { ClerkProvider } from '@clerk/nextjs'
 import localFont from 'next/font/local'
 import './globals.css'
 
-// const firaCode = Fira_Code({
-//   subsets: ['latin'],
-//   fallback: ['monospace'],
-// })
-
 const localFiraCode = localFont({
   src: '../public/font/FiraCode-VariableFont_wght.ttf',
 })
@@ -31,7 +26,9 @@ export default function RootLayout({
           <SideBar />
 
           <div className="flex h-screen flex-1 flex-col">
-            <div className="flex-1">{children}</div>
+            <div className="h-[calc(100vh-1rem)] flex-1 overflow-auto">
+              {children}
+            </div>
             <StatusBar />
           </div>
         </body>

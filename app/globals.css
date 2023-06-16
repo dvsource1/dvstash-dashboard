@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #353940 #41454b;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  @apply w-1;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-od_black_90;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-od_black_95;
+}
+
 .cl-internal-b3fm6y,
 .cl-internal-b4xm84,
 .cl-userButtonPopoverFooter {

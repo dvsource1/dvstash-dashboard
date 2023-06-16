@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 
 type ButtonProps = {
-  onClick?: () => {}
+  onClick?: () => void
   children?: React.ReactNode
   href?: string
   icon?: any

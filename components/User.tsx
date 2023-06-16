@@ -34,7 +34,7 @@ const User: React.FC<UserProps> = ({}) => {
           <UserCircleIcon className="h-8 w-8 text-od_gray group-hover:text-white" />
         )}
       </Popover.Button>
-      <Popover.Panel className="max-w absolute bottom-0 left-12 flex w-52 min-w-max max-w-xs flex-col bg-od_gray/5">
+      <Popover.Panel className="max-w absolute bottom-0 left-12 flex w-52 min-w-max max-w-xs flex-col bg-od_black__gray_5 z-30">
         {/* Profile Header */}
         {isSignedIn && isLoaded && (
           <div className="group flex w-full cursor-pointer gap-2 p-2">

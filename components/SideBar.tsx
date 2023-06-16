@@ -106,7 +106,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
   }
 
   return (
-    <div className="flex h-screen w-12 flex-col bg-od_black/90">
+    <div className="z-20 flex h-screen w-12 flex-col bg-od_black_90">
       <Logo />
       <div className="flex flex-1 flex-col">
         <ul className="flex-1">

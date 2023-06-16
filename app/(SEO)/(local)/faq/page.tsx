@@ -26,7 +26,7 @@ const Page: React.FC<PageProps> = ({}) => {
       <Header title={'FAQ'} />
 
       <div className="w-full flex-1 px-4 pt-16">
-        <div className="mx-auto w-full max-w-md bg-od_gray/10 p-2">
+        <div className="mx-auto w-full max-w-md bg-od_black__gray_10 p-2">
           <Disclosures faqs={faqs} />
         </div>
       </div>

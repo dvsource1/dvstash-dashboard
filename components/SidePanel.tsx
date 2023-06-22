@@ -19,12 +19,12 @@ const SidePanel: React.FC<SidePanelProps> = ({}) => {
         leaveTo="-ml-72"
         enter="duration-300"
         leave="duration-200">
-        <div className="h-full w-72 bg-od_black_95">...</div>
+        <div className="h-full w-72 bg-OD_BLACK-300">...</div>
       </Transition>
       <div className="relative h-full bg-transparent">
         <div
           onClick={() => setShowSidePanel(!showSidePanel)}
-          className="absolute bottom-0 left-0 flex h-12 w-4 cursor-pointer items-center justify-center  border-l border-od_black bg-od_black_95 text-od_gray">
+          className="absolute bottom-0 left-0 flex h-12 w-4 cursor-pointer items-center justify-center  border-l border-OD_BLACK bg-OD_BLACK-300 text-OD_GRAY">
           {showSidePanel ? <ChevronLeftIcon /> : <ChevronRightIcon />}
         </div>
       </div>

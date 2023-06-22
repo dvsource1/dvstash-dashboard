@@ -14,7 +14,7 @@ const Page: React.FC<PageProps> = ({}) => {
   return (
     <div className="flex h-full flex-col items-center justify-center">
       {isLoaded && isSignedIn ? (
-        <div className="gap-2 text-center text-od_gray">
+        <div className="gap-2 text-center text-OD_GRAY">
           <p>
             You are already logged in as{' '}
             <Link className="hover:underline" href="/profile">

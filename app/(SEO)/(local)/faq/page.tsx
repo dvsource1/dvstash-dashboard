@@ -25,7 +25,7 @@ const Page: React.FC<PageProps> = ({}) => {
     <div className="flex h-full flex-col gap-2">
       <Header title={'Faq'} />
       <div className="overflow-auto">
-        <div className="mx-auto w-full max-w-md bg-od_black__gray_10 p-2">
+        <div className="mx-auto w-full max-w-md bg-OD_GRAY-500 p-2">
           <Disclosures faqs={faqs} />
         </div>
       </div>

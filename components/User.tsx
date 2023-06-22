@@ -31,10 +31,10 @@ const User: React.FC<UserProps> = ({}) => {
             alt="profile_picture"
           />
         ) : (
-          <UserCircleIcon className="h-8 w-8 text-od_gray group-hover:text-white" />
+          <UserCircleIcon className="h-8 w-8 text-OD_GRAY group-hover:text-OD_WHITE" />
         )}
       </Popover.Button>
-      <Popover.Panel className="max-w absolute bottom-0 left-12 z-30 flex w-52 min-w-max max-w-xs flex-col bg-od_black__gray_5">
+      <Popover.Panel className="max-w absolute bottom-0 left-12 z-30 flex w-52 min-w-max max-w-xs flex-col bg-OD_GRAY-500">
         {/* Profile Header */}
         {isSignedIn && isLoaded && (
           <div
@@ -49,9 +49,9 @@ const User: React.FC<UserProps> = ({}) => {
                 alt="profile_picture"
               />
             </div>
-            <div className="flex-1 text-od_gray">
+            <div className="flex-1 text-OD_GRAY">
               <p className="group-hover:underline">{`${user.firstName} ${user.lastName}`}</p>
-              <p className="text-sm text-od_gray/80 group-hover:underline">
+              <p className="text-sm text-OD_GRAY/80 group-hover:underline">
                 @{user.username}
               </p>
             </div>

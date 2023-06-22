@@ -30,6 +30,7 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          nony: 'hsl(var(--primary-foreground))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -55,24 +56,68 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        od_red: '#e06c75',
-        od_green: '#98c379',
-        od_yellow: '#e5c07b',
-        od_blue: '#61afef',
-        od_purple: '#c678dd',
-        od_pink: '#f472b6',
-        od_cyan: '#56b6c2',
-        od_black: '#282c34',
-        od_black_95: '#353940',
-        od_black_90: '#41454b',
-        od_gray: '#abb2bf',
-        od_black__gray_80: '#929aa6',
-        od_black__gray_40: '#616570',
-        od_black__gray_10: '#383c44',
-        od_black__gray_5: '#2f353c',
-        od_black_90__blue_40: '#4e7191',
-        od_black__blue_80: '#5f97c8',
-        od_black__yellow_20: '#544d43',
+        OD_RED: {
+          DEFAULT: '#e06c75', // hsl(355, 65%, 65%)
+          200: 'hsl(355, 20%, 80%)',
+          400: 'hsl(355, 40%, 60%)',
+          600: 'hsl(355, 60%, 40%)',
+          800: 'hsl(355, 80%, 20%)',
+        },
+        OD_GREEN: {
+          DEFAULT: '#98c379', // hsl(95, 38%, 62%)
+          200: 'hsl(95, 20%, 80%)',
+          400: 'hsl(95, 40%, 60%)',
+          600: 'hsl(95, 60%, 40%)',
+          800: 'hsl(95, 80%, 20%)',
+        },
+        OD_YELLOW: {
+          DEFAULT: '#e5c07b', // hsl(39, 67%, 69%)
+          200: 'hsl(39, 20%, 80%)',
+          400: 'hsl(39, 40%, 60%)',
+          600: 'hsl(39, 60%, 40%)',
+          800: 'hsl(39, 80%, 20%)',
+        },
+        OD_BLUE: {
+          DEFAULT: '#61afef', // hsl(207, 82%, 66%)
+          200: 'hsl(207, 20%, 80%)',
+          400: 'hsl(207, 40%, 60%)',
+          600: 'hsl(207, 60%, 40%)',
+          800: 'hsl(207, 80%, 20%)',
+        },
+        OD_PURPLE: {
+          DEFAULT: '#c678dd', // hsl(286, 60%, 67%)
+          200: 'hsl(286, 20%, 80%)',
+          400: 'hsl(286, 40%, 60%)',
+          600: 'hsl(286, 60%, 40%)',
+          800: 'hsl(286, 80%, 20%)',
+        },
+        OD_PINK: {
+          DEFAULT: '#f472b6', // hsl(329, 86%, 70%)
+          200: 'hsl(329, 20%, 80%)',
+          400: 'hsl(329, 40%, 60%)',
+          600: 'hsl(329, 60%, 40%)',
+          800: 'hsl(329, 80%, 20%)',
+        },
+        OD_CYAN: {
+          DEFAULT: '#56b6c2', // hsl(187, 47%, 55%)
+          200: 'hsl(187, 20%, 80%)',
+          400: 'hsl(187, 40%, 60%)',
+          600: 'hsl(187, 60%, 40%)',
+          800: 'hsl(187, 80%, 20%)',
+        },
+        OD_BLACK: {
+          DEFAULT: '#282c34', // hsl(220, 14%, 20%)
+          100: 'hsl(220, 14%, 10%)',
+          300: 'hsl(220, 14%, 30%)',
+          400: 'hsl(220, 14%, 40%)',
+        },
+        OD_GRAY: {
+          DEFAULT: '#a8afbd', // hsl(220, 14%, 70%)
+          500: 'hsl(220, 14%, 50%)',
+          600: 'hsl(220, 14%, 60%)',
+          800: 'hsl(220, 14%, 80%)',
+        },
+        OD_WHITE: 'hsl(220, 14%, 90%)',
       },
       borderRadius: {
         lg: `var(--radius)`,

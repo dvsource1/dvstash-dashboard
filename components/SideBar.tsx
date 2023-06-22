@@ -94,14 +94,14 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
   ]
 
   return (
-    <div className="z-20 flex h-screen w-12 flex-col bg-od_black_90">
+    <div className="z-20 flex h-screen w-12 flex-col bg-OD_BLACK-200">
       <Logo />
       <div className="flex h-[calc(100vh-3rem)] flex-1 flex-col">
         <ul className="h-[calc(100vh-6rem)] flex-1 touch-pan-y snap-y overflow-y-auto overflow-x-hidden scroll-smooth">
           {actions.map((action, i) => (
             <li
               key={i}
-              className="cursor-pointer snap-start bg-od_black_90"
+              className="cursor-pointer snap-start"
               onClick={() => router.push(action.path)}>
               <SideBarIcon icon={action.icon} title={action.title} />
             </li>

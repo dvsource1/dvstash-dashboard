@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className="flex h-10 w-20 min-w-max items-center justify-center gap-2 border-2 border-od_gray px-4 text-od_gray hover:border-od_yellow hover:text-od_yellow/60"
+      className="border-GRAY flex h-10 w-20 min-w-max items-center justify-center gap-2 border-2 px-4 text-OD_GRAY hover:border-OD_YELLOW hover:text-OD_YELLOW/60"
       onClick={() => (href ? router.push(href) : onClick?.())}>
       {Icon && (
         <div className="flex items-center">

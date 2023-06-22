@@ -80,6 +80,7 @@
   }
 }
 
+/* Custom Scrollbar --- */
 /* Firefox */
 * {
   scrollbar-width: thin;
@@ -92,13 +93,15 @@
 }
 
 *::-webkit-scrollbar-track {
-  @apply bg-od_black_90;
+  @apply bg-OD_BLACK_90;
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply bg-od_black_95;
+  @apply bg-OD_BLACK_95;
 }
+/* --- Custom Scrollbar */
 
+/* Clerk Styles --- */
 .cl-internal-b3fm6y,
 .cl-internal-b4xm84,
 .cl-userButtonPopoverFooter {
@@ -106,15 +109,15 @@
 }
 
 .cl-navbar {
-  @apply rounded-none bg-od_black;
+  @apply rounded-none bg-OD_BLACK;
 }
 
 .cl-card {
-  @apply rounded-none bg-od_black p-6 shadow-none;
+  @apply rounded-none bg-OD_BLACK p-6 shadow-none;
 }
 
 .cl-userButtonPopoverCard {
-  @apply bg-od_gray/5;
+  @apply bg-OD_GRAY/5;
 }
 
 .cl-socialButtonsBlockButton {
@@ -131,24 +134,25 @@
 .cl-accordionTriggerButton,
 .cl-navbarMobileMenuButton,
 .cl-navbarButton {
-  @apply text-od_gray;
+  @apply text-OD_GRAY;
 }
 
 .cl-internal-fqx4fd,
 .cl-internal-of57g {
-  @apply text-od_gray/80;
+  @apply text-OD_GRAY/80;
 }
 
 .cl-modalCloseButton,
 .cl-internal-1trxv31 {
-  @apply text-od_red;
+  @apply text-OD_RED;
 }
 
 .cl-footerActionLink,
 .cl-profileSectionPrimaryButton {
-  @apply text-od_blue/80 hover:text-od_blue/50;
+  @apply text-OD_BLUE/80 hover:text-OD_BLUE/50;
 }
 
 .cl-badge {
-  @apply bg-od_blue/20 text-od_blue/80;
+  @apply bg-OD_BLUE/20 text-OD_BLUE/80;
 }
+/* --- Clerk Styles */

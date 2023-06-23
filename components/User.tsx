@@ -1,82 +1,72 @@
 'use client'
 
-import { useClerk, useUser } from '@clerk/nextjs'
-import { Popover } from '@headlessui/react'
-import {
-  ArrowDownOnSquareIcon,
-  ArrowLeftOnRectangleIcon,
-  ArrowRightOnRectangleIcon,
-  UserCircleIcon,
-} from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import type { SignOut, UserResource } from '@clerk/types'
 import { useRouter } from 'next/navigation'
-import MenuItem from './MenuItem'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/Popover'
 
-type UserProps = {}
+import Image from 'next/image'
+import { useRef, useState } from 'react'
 
-const User: React.FC<UserProps> = ({}) => {
-  const { isLoaded, isSignedIn, user } = useUser()
-  const { signOut } = useClerk()
+type UserProps = {
+  isLoaded: boolean
+  isSignedIn: boolean | undefined
+  user: UserResource | null | undefined
+  signOut: SignOut
+}
+
+const User: React.FC<UserProps> = ({ isLoaded, isSignedIn, user, signOut }) => {
+  const [open, setOpen] = useState(false)
   const router = useRouter()
+  const popover = useRef()
+
+  const closePopoverWithAction = (action?: () => void) => () => {
+    action?.()
+    setOpen(false)
+  }
+
+  const actions = [
+    {
+      title: 'View Profile',
+      action: closePopoverWithAction(() => router.push('/profile')),
+    },
+    {
+      title: 'Settings',
+      action: closePopoverWithAction(() => router.push('/settings')),
+    },
+    { title: 'Logout', action: closePopoverWithAction(() => signOut()) },
+  ]
 
   return (
-    <Popover className="relative flex h-12 w-12 items-center justify-center">
-      <Popover.Button className="group cursor-pointer">
-        {isLoaded && isSignedIn ? (
-          <Image
-            className="h-8 w-8 rounded-full"
-            width={60}
-            height={60}
-            src={user.profileImageUrl}
-            alt="profile_picture"
-          />
-        ) : (
-          <UserCircleIcon className="h-8 w-8 text-OD_GRAY group-hover:text-OD_WHITE" />
-        )}
-      </Popover.Button>
-      <Popover.Panel className="max-w absolute bottom-0 left-12 z-30 flex w-52 min-w-max max-w-xs flex-col bg-OD_GRAY-500">
-        {/* Profile Header */}
-        {isSignedIn && isLoaded && (
-          <div
-            className="group flex w-full cursor-pointer gap-2 p-2"
-            onClick={() => router.push('/profile')}>
-            <div className="flex w-12 items-center justify-center">
-              <Image
-                className="h-10 w-10 rounded-full"
-                width={100}
-                height={100}
-                src={user.profileImageUrl}
-                alt="profile_picture"
-              />
+    isLoaded &&
+    isSignedIn &&
+    user && (
+      <div className="group flex h-full cursor-pointer items-center px-2 text-OD_GRAY hover:bg-OD_BLACK-300">
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <p className="group-hover:underline">{`@${user?.username}`}</p>
+          </PopoverTrigger>
+          <PopoverContent className="flex w-40 bg-OD_BLACK-300 text-OD_GRAY">
+            <Image
+              className="h-12 w-12"
+              width={60}
+              height={60}
+              src={user.profileImageUrl}
+              alt="profile_picture"
+            />
+            <div className="flex flex-1 flex-col text-xxs">
+              {actions.map((action, key) => (
+                <div
+                  key={key}
+                  className="flex h-full cursor-pointer items-center px-2 hover:bg-OD_GRAY-100 hover:underline"
+                  onClick={action.action}>
+                  <p>{action.title}</p>
+                </div>
+              ))}
             </div>
-            <div className="flex-1 text-OD_GRAY">
-              <p className="group-hover:underline">{`${user.firstName} ${user.lastName}`}</p>
-              <p className="text-sm text-OD_GRAY/80 group-hover:underline">
-                @{user.username}
-              </p>
-            </div>
-          </div>
-        )}
-        {/* Menu Items */}
-        {isSignedIn ? (
-          <MenuItem
-            title="Logout"
-            icon={ArrowRightOnRectangleIcon}
-            onClick={() => signOut()}></MenuItem>
-        ) : (
-          <>
-            <MenuItem
-              title="Login"
-              icon={ArrowLeftOnRectangleIcon}
-              onClick={() => router.push('/login')}></MenuItem>
-            <MenuItem
-              title="Register"
-              icon={ArrowDownOnSquareIcon}
-              onClick={() => router.push('/register')}></MenuItem>
-          </>
-        )}
-      </Popover.Panel>
-    </Popover>
+          </PopoverContent>
+        </Popover>
+      </div>
+    )
   )
 }
 

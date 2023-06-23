@@ -14,7 +14,6 @@ import {
 import { useRouter } from 'next/navigation'
 import Logo from './Logo'
 import SideBarIcon from './SideBarIcon'
-import User from './User'
 
 type SideBarProps = {}
 
@@ -97,7 +96,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
     <div className="z-20 flex h-screen w-12 flex-col bg-OD_BLACK-200">
       <Logo />
       <div className="flex h-[calc(100vh-3rem)] flex-1 flex-col">
-        <ul className="h-[calc(100vh-6rem)] flex-1 touch-pan-y snap-y overflow-y-auto overflow-x-hidden scroll-smooth">
+        <ul className="touch-pan-y snap-y overflow-y-auto overflow-x-hidden scroll-smooth">
           {actions.map((action, i) => (
             <li
               key={i}
@@ -107,7 +106,6 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
             </li>
           ))}
         </ul>
-        <User />
       </div>
     </div>
   )

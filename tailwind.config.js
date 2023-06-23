@@ -30,7 +30,6 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
-          nony: 'hsl(var(--primary-foreground))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -57,67 +56,76 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
         OD_RED: {
-          DEFAULT: '#e06c75', // hsl(355, 65%, 65%)
+          DEFAULT: 'hsl(var(--OD_RED))', // hsl(355, 65%, 65%)
           200: 'hsl(355, 20%, 80%)',
           400: 'hsl(355, 40%, 60%)',
           600: 'hsl(355, 60%, 40%)',
           800: 'hsl(355, 80%, 20%)',
         },
         OD_GREEN: {
-          DEFAULT: '#98c379', // hsl(95, 38%, 62%)
+          DEFAULT: 'hsl(var(--OD_GREEN))', // hsl(95, 38%, 62%)
           200: 'hsl(95, 20%, 80%)',
           400: 'hsl(95, 40%, 60%)',
           600: 'hsl(95, 60%, 40%)',
           800: 'hsl(95, 80%, 20%)',
         },
         OD_YELLOW: {
-          DEFAULT: '#e5c07b', // hsl(39, 67%, 69%)
+          DEFAULT: 'hsl(var(--OD_YELLOW))', // hsl(39, 67%, 69%)
           200: 'hsl(39, 20%, 80%)',
           400: 'hsl(39, 40%, 60%)',
           600: 'hsl(39, 60%, 40%)',
           800: 'hsl(39, 80%, 20%)',
         },
         OD_BLUE: {
-          DEFAULT: '#61afef', // hsl(207, 82%, 66%)
+          DEFAULT: 'hsl(var(--OD_BLUE))', // hsl(207, 82%, 66%)
           200: 'hsl(207, 20%, 80%)',
           400: 'hsl(207, 40%, 60%)',
           600: 'hsl(207, 60%, 40%)',
           800: 'hsl(207, 80%, 20%)',
         },
         OD_PURPLE: {
-          DEFAULT: '#c678dd', // hsl(286, 60%, 67%)
+          DEFAULT: 'hsl(var(--OD_PURPLE))', // hsl(286, 60%, 67%)
           200: 'hsl(286, 20%, 80%)',
           400: 'hsl(286, 40%, 60%)',
           600: 'hsl(286, 60%, 40%)',
           800: 'hsl(286, 80%, 20%)',
         },
         OD_PINK: {
-          DEFAULT: '#f472b6', // hsl(329, 86%, 70%)
+          DEFAULT: 'hsl(var(--OD_PINK))', // hsl(329, 86%, 70%)
           200: 'hsl(329, 20%, 80%)',
           400: 'hsl(329, 40%, 60%)',
           600: 'hsl(329, 60%, 40%)',
           800: 'hsl(329, 80%, 20%)',
         },
         OD_CYAN: {
-          DEFAULT: '#56b6c2', // hsl(187, 47%, 55%)
+          DEFAULT: 'hsl(var(--OD_CYAN))', // hsl(187, 47%, 55%)
           200: 'hsl(187, 20%, 80%)',
           400: 'hsl(187, 40%, 60%)',
           600: 'hsl(187, 60%, 40%)',
           800: 'hsl(187, 80%, 20%)',
         },
         OD_BLACK: {
-          DEFAULT: '#282c34', // hsl(220, 14%, 20%)
+          DEFAULT: 'hsl(var(--OD_BLACK))', // hsl(220, 14%, 20%)
           100: 'hsl(220, 14%, 10%)',
-          300: 'hsl(220, 14%, 30%)',
-          400: 'hsl(220, 14%, 40%)',
+          200: 'hsl(220, 14%, 13%)',
+          300: 'hsl(220, 14%, 16%)',
+          400: 'hsl(220, 14%, 25%)',
+          600: 'hsl(220, 14%, 30%)',
+          700: 'hsl(220, 14%, 35%)',
+          800: 'hsl(220, 14%, 40%)',
+          900: 'hsl(220, 14%, 45%)',
         },
         OD_GRAY: {
-          DEFAULT: '#a8afbd', // hsl(220, 14%, 70%)
-          500: 'hsl(220, 14%, 50%)',
-          600: 'hsl(220, 14%, 60%)',
-          800: 'hsl(220, 14%, 80%)',
+          DEFAULT: 'hsl(var(--OD_GRAY))', // hsl(220, 14%, 70%)
+          100: 'hsl(220, 14%, 50%)',
+          200: 'hsl(220, 14%, 55%)',
+          300: 'hsl(220, 14%, 60%)',
+          400: 'hsl(220, 14%, 65%)',
+          600: 'hsl(220, 14%, 75%)',
+          700: 'hsl(220, 14%, 80%)',
+          800: 'hsl(220, 14%, 85%)',
         },
-        OD_WHITE: 'hsl(220, 14%, 90%)',
+        OD_WHITE: 'hsl(var(--OD_WHITE))', // hsl(220 14% 90%)
       },
       borderRadius: {
         lg: `var(--radius)`,

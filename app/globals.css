@@ -2,102 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --OD_RED: 355 65% 65%; /* hsl(355 65% 65%) */
-    --OD_GREEN: 95 38% 62%; /* hsl(95 38% 62%) */
-    --OD_YELLOW: 39 67% 69%; /* hsl(39 67% 69%) */
-    --OD_BLUE: 207 82% 66%; /* hsl(207 82% 66%) */
-    --OD_PURPLE: 286 60% 67%; /* hsl(286 60% 67%) */
-    --OD_PINK: 329 86% 70%; /* hsl(329 86% 70%) */
-    --OD_CYAN: 187 47% 55%; /* hsl(187 47% 55%) */
-    --OD_BLACK: 220 14% 20%; /* hsl(220 14% 20%) */
-    --OD_GRAY: 220 14% 70%; /* hsl(220 14% 70%) */
-    --OD_WHITE: 220 14% 90%; /* hsl(220 14% 90%) */
-
-    --BLUE_BLACK: var(--OD_BLACK);
-
-    --background: var(--OD_WHITE);
-    --foreground: var(--BLUE_BLACK);
-
-    --muted: var(--OD_WHITE);
-    --muted-foreground: var(--OD_GRAY);
-
-    --popover: var(--OD_WHITE);
-    --popover-foreground: var(--BLUE_BLACK);
-
-    --card: var(--OD_WHITE);
-    --card-foreground: var(--BLUE_BLACK);
-
-    --border: var(--OD_GRAY);
-    --input: var(--OD_WHITE);
-
-    --primary: var(--BLUE_BLACK);
-    --primary-foreground: var(--OD_WHITE);
-
-    --secondary: var(--OD_WHITE);
-    --secondary-foreground: var(--BLUE_BLACK);
-
-    --accent: var(--OD_WHITE);
-    --accent-foreground: var(--BLUE_BLACK);
-
-    --destructive: var(--OD_RED);
-    --destructive-foreground: var(--OD_WHITE);
-
-    --ring: var(--OD_GRAY);
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: var(--BLUE_BLACK);
-    --foreground: var(--OD_WHITE);
-
-    --muted: var(--BLUE_BLACK);
-    --muted-foreground: var(--OD_GRAY);
-
-    --popover: var(--BLUE_BLACK);
-    --popover-foreground: var(--OD_GRAY);
-
-    --card: var(--BLUE_BLACK);
-    --card-foreground: var(--OD_WHITE);
-
-    --border: var(--BLUE_BLACK);
-    --input: var(--BLUE_BLACK);
-
-    --primary: var(--OD_WHITE);
-    --primary-foreground: var(--BLUE_BLACK);
-
-    --secondary: var(--BLUE_BLACK);
-    --secondary-foreground: var(--OD_WHITE);
-
-    --accent: var(--BLUE_BLACK);
-    --accent-foreground: var(--OD_WHITE);
-
-    --destructive: var(--OD_RED);
-    --destructive-foreground: var(--OD_WHITE);
-
-    --ring: var(--BLUE_BLACK);
-
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
-  }
-}
-
 /* Custom Scrollbar --- */
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #353940 #41454b;
+  scrollbar-color: hsl(220, 14%, 10%) hsl(220, 14%, 12%);
 }
 
 /* Chrome, Edge, and Safari */

@@ -428,7 +428,7 @@
 
 "@radix-ui/react-toast@^1.1.4":
   version "1.1.4"
-  resolved "https://registry.npmjs.org/@radix-ui/react-toast/-/react-toast-1.1.4.tgz"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-toast/-/react-toast-1.1.4.tgz#9a7fc2d71700886f3292f7699c905f1e01be59e1"
   integrity sha512-wf+fc8DOywrpRK3jlPlWVe+ELYGHdKDaaARJZNuUTWyWYq7+ANCFLp4rTjZ/mcGkJJQ/vZ949Zis9xxEpfq9OA==
   dependencies:
     "@babel/runtime" "^7.13.10"
@@ -447,7 +447,7 @@
 
 "@radix-ui/react-tooltip@^1.0.6":
   version "1.0.6"
-  resolved "https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.0.6.tgz"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-tooltip/-/react-tooltip-1.0.6.tgz#87a7786cd9f2b4de957ac645afae1575339c58b0"
   integrity sha512-DmNFOiwEc2UDigsYj6clJENma58OelxD24O4IODoZ+3sQc3Zb+L8w1EP+y9laTuKCLAysPw4fD6/v0j4KNV8rg==
   dependencies:
     "@babel/runtime" "^7.13.10"
@@ -1093,7 +1093,7 @@ client-only@0.0.1, client-only@^0.0.1:
   resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
 
-clsx@1.2.1:
+clsx@1.2.1, clsx@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
@@ -2303,10 +2303,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-react@^0.246.0:
-  version "0.246.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.246.0.tgz#53b3c710ce7e8872a9aa28c540371a8009261973"
-  integrity sha512-0OkIG28coMDnQfy9+vYr/+8BY42KpBO05WkslfIEJuDxi/qwcJfUXsG+nhONGMAUs/ADR5fE8upHBw76O/yMPg==
+lucide-react@^0.250.0:
+  version "0.250.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.250.0.tgz#76059ae2a7b7a1cb895ac95698660967cb98e06f"
+  integrity sha512-AdboVcX2IMQs5NcyFu6vSbZWkn0Z07TjVvb9uPLI2IetNbygE0/6mPbHLwJwgD7AS/t0JJPwmP2vhVD1xA+P+w==
 
 map-obj@^4.0.0, map-obj@^4.1.0:
   version "4.3.0"
